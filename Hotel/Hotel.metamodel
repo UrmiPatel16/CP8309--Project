@@ -1,0 +1,259 @@
+{
+	"types": {
+		"User": [
+			{
+				"name": "Name",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "UserID",
+				"type": "int",
+				"default": "-1"
+			}
+		],
+		"Hotel": [
+			{
+				"name": "Name",
+				"type": "string",
+				"default": "Hotel1"
+			},
+			{
+				"name": "MaxRoom",
+				"type": "int",
+				"default": "20"
+			}
+		],
+		"Room": [
+			{
+				"name": "Booked",
+				"type": "boolean",
+				"default": "false"
+			},
+			{
+				"name": "RoomNumber",
+				"type": "int",
+				"default": "-1"
+			},
+			{
+				"name": "UserID",
+				"type": "int",
+				"default": "-1"
+			},
+			{
+				"name": "Price",
+				"type": "float",
+				"default": "30"
+			}
+		],
+		"booking": [],
+		"RoyalSuite": [
+			{
+				"name": "MasterBedroom",
+				"type": "boolean",
+				"default": "true"
+			},
+			{
+				"name": "Booked",
+				"type": "boolean",
+				"default": "false"
+			},
+			{
+				"name": "RoomNumber",
+				"type": "int",
+				"default": "-1"
+			},
+			{
+				"name": "UserID",
+				"type": "int",
+				"default": "-1"
+			},
+			{
+				"name": "Price",
+				"type": "float",
+				"default": "30"
+			}
+		],
+		"StandardRoom": [
+			{
+				"name": "MasterBedroom",
+				"type": "boolean",
+				"default": "false"
+			},
+			{
+				"name": "Booked",
+				"type": "boolean",
+				"default": "false"
+			},
+			{
+				"name": "RoomNumber",
+				"type": "int",
+				"default": "-1"
+			},
+			{
+				"name": "UserID",
+				"type": "int",
+				"default": "-1"
+			},
+			{
+				"name": "Price",
+				"type": "float",
+				"default": "30"
+			}
+		],
+		"select": []
+	},
+	"constraints": [
+		{
+			"name": "LC-Royal-Room",
+			"event": "pre-create",
+			"code": "getAllNodes(['/Formalisms/Hotel/Hotel/RoyalSuite']).length == 0",
+			"targetType": "RoyalSuite"
+		},
+		{
+			"name": "GC_Hotel_Max",
+			"event": "validate",
+			"targetType": "*",
+			"code": "getAllNodes(['/Formalisms/Hotel/Hotel/Hotel']).length == 1;"
+		},
+		{
+			"name": "GC_Hotel_Max_Room",
+			"event": "validate",
+			"targetType": "*",
+			"code": "var hotelinstance = getAllNodes(['/Formalisms/Hotel/Hotel/Hotel']);\nvar royalinstance = getAllNodes(['/Formalisms/Hotel/Hotel/RoyalSuite']);\nvar standardinstance = getAllNodes(['/Formalisms/Hotel/Hotel/StandardRoom']);\n\nroyalinstance.length + standardinstance.length  <=  getAttr('MaxRoom', hotelinstance[0]);"
+		},
+		{
+			"name": "GC_Unique_UserID",
+			"event": "validate",
+			"targetType": "*",
+			"code": "var userInstances = getAllNodes(['/Formalisms/Hotel/Hotel/User']);\nvar userID = [];\n\nfor(let i = 0; i < userInstances.length; i++){\n    userID.push(getAttr('UserID', userInstances[i]));\n}\n\n(new Set(userID)).size == userID.length;"
+		}
+	],
+	"actions": [],
+	"cardinalities": {
+		"User": [
+			{
+				"dir": "out",
+				"type": "select",
+				"min": "1",
+				"max": "*"
+			}
+		],
+		"Hotel": [
+			{
+				"dir": "in",
+				"type": "select",
+				"min": "1",
+				"max": "*"
+			},
+			{
+				"dir": "out",
+				"type": "booking",
+				"min": "0",
+				"max": "*"
+			}
+		],
+		"Room": [
+			{
+				"dir": "in",
+				"type": "booking",
+				"min": "1",
+				"max": "1"
+			}
+		],
+		"booking": [
+			{
+				"dir": "in",
+				"type": "Hotel",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "Room",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "RoyalSuite",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "StandardRoom",
+				"min": "0",
+				"max": "1"
+			}
+		],
+		"RoyalSuite": [
+			{
+				"dir": "in",
+				"type": "booking",
+				"min": "1",
+				"max": "1"
+			}
+		],
+		"StandardRoom": [
+			{
+				"dir": "in",
+				"type": "booking",
+				"min": "1",
+				"max": "1"
+			}
+		],
+		"select": [
+			{
+				"dir": "in",
+				"type": "User",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "Hotel",
+				"min": "0",
+				"max": "1"
+			}
+		]
+	},
+	"legalConnections": {
+		"User": {
+			"Hotel": [
+				"select"
+			]
+		},
+		"Hotel": {
+			"Room": [
+				"booking"
+			],
+			"RoyalSuite": [
+				"booking"
+			],
+			"StandardRoom": [
+				"booking"
+			]
+		}
+	},
+	"connectorTypes": {
+		"booking": "visual",
+		"select": "visual"
+	},
+	"types2parentTypes": {
+		"User": [],
+		"Hotel": [],
+		"Room": [],
+		"booking": [],
+		"RoyalSuite": [
+			"Room"
+		],
+		"StandardRoom": [
+			"Room"
+		],
+		"GC_Hotel_Max": [],
+		"GC_Hotel_Max_Room": [],
+		"select": [],
+		"GC_Unique_UserID": []
+	}
+}

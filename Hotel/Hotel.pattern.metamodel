@@ -1,0 +1,408 @@
+{
+	"types": {
+		"__pUser": [
+			{
+				"name": "__pLabel",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotIn",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotOut",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pMatchSubtypes",
+				"type": "boolean",
+				"default": true
+			},
+			{
+				"name": "Name",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			},
+			{
+				"name": "UserID",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			}
+		],
+		"__pHotel": [
+			{
+				"name": "__pLabel",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotIn",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotOut",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pMatchSubtypes",
+				"type": "boolean",
+				"default": true
+			},
+			{
+				"name": "Name",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			},
+			{
+				"name": "MaxRoom",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			}
+		],
+		"__pRoom": [
+			{
+				"name": "__pLabel",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotIn",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotOut",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pMatchSubtypes",
+				"type": "boolean",
+				"default": true
+			},
+			{
+				"name": "Booked",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			},
+			{
+				"name": "RoomNumber",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			},
+			{
+				"name": "UserID",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			},
+			{
+				"name": "Price",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			}
+		],
+		"__pbooking": [
+			{
+				"name": "__pLabel",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotIn",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotOut",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pMatchSubtypes",
+				"type": "boolean",
+				"default": true
+			}
+		],
+		"__pRoyalSuite": [
+			{
+				"name": "__pLabel",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotIn",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotOut",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pMatchSubtypes",
+				"type": "boolean",
+				"default": true
+			},
+			{
+				"name": "MasterBedroom",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			},
+			{
+				"name": "Booked",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			},
+			{
+				"name": "RoomNumber",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			},
+			{
+				"name": "UserID",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			},
+			{
+				"name": "Price",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			}
+		],
+		"__pStandardRoom": [
+			{
+				"name": "__pLabel",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotIn",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotOut",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pMatchSubtypes",
+				"type": "boolean",
+				"default": true
+			},
+			{
+				"name": "MasterBedroom",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			},
+			{
+				"name": "Booked",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			},
+			{
+				"name": "RoomNumber",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			},
+			{
+				"name": "UserID",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			},
+			{
+				"name": "Price",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			}
+		],
+		"__pselect": [
+			{
+				"name": "__pLabel",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotIn",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotOut",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pMatchSubtypes",
+				"type": "boolean",
+				"default": true
+			}
+		]
+	},
+	"constraints": [
+		{
+			"name": "LC-Royal-Room",
+			"event": "pre-create",
+			"code": "/* comment next line to enable this constraint */\nthrow \"IgnoredConstraint\"\ngetAllNodes(['/Formalisms/Hotel/Hotel/RoyalSuite']).length == 0",
+			"targetType": "RoyalSuite"
+		},
+		{
+			"name": "GC_Hotel_Max",
+			"event": "validate",
+			"targetType": "*",
+			"code": "/* comment next line to enable this constraint */\nthrow \"IgnoredConstraint\"\ngetAllNodes(['/Formalisms/Hotel/Hotel/Hotel']).length == 1;"
+		},
+		{
+			"name": "GC_Hotel_Max_Room",
+			"event": "validate",
+			"targetType": "*",
+			"code": "/* comment next line to enable this constraint */\nthrow \"IgnoredConstraint\"\nvar hotelinstance = getAllNodes(['/Formalisms/Hotel/Hotel/Hotel']);\nvar royalinstance = getAllNodes(['/Formalisms/Hotel/Hotel/RoyalSuite']);\nvar standardinstance = getAllNodes(['/Formalisms/Hotel/Hotel/StandardRoom']);\n\nroyalinstance.length + standardinstance.length  <=  getAttr('MaxRoom', hotelinstance[0]);"
+		},
+		{
+			"name": "GC_Unique_UserID",
+			"event": "validate",
+			"targetType": "*",
+			"code": "/* comment next line to enable this constraint */\nthrow \"IgnoredConstraint\"\nvar userInstances = getAllNodes(['/Formalisms/Hotel/Hotel/User']);\nvar userID = [];\n\nfor(let i = 0; i < userInstances.length; i++){\n    userID.push(getAttr('UserID', userInstances[i]));\n}\n\n(new Set(userID)).size == userID.length;"
+		}
+	],
+	"actions": [
+		{
+			"name": "distinctPLabels",
+			"event": "post-create",
+			"code": "if( getAttr(\"__pLabel\") == \"\" )\n{\n\tvar pLabels = getAllNodes().\n\t\t\t\t\t\t\tfilter( function(n) {return hasAttr(\"__pLabel\",n);} ).\n\t\t\t\t\t\t\t\tmap( function(n) {return getAttr(\"__pLabel\",n);} ),\n\t\t i\t\t\t= \"0\";\n\n\twhile( _utils.contains(pLabels,i) )\n\t\ti = String(parseInt(i)+1);\n\tsetAttr(\"__pLabel\",i);\n}",
+			"targetType": "*"
+		}
+	],
+	"cardinalities": {
+		"__pUser": [
+			{
+				"dir": "out",
+				"type": "__pselect",
+				"min": 0,
+				"max": "*"
+			}
+		],
+		"__pHotel": [
+			{
+				"dir": "in",
+				"type": "__pselect",
+				"min": 0,
+				"max": "*"
+			},
+			{
+				"dir": "out",
+				"type": "__pbooking",
+				"min": 0,
+				"max": "*"
+			}
+		],
+		"__pRoom": [
+			{
+				"dir": "in",
+				"type": "__pbooking",
+				"min": 0,
+				"max": "1"
+			}
+		],
+		"__pbooking": [
+			{
+				"dir": "in",
+				"type": "__pHotel",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "__pRoom",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "__pRoyalSuite",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "__pStandardRoom",
+				"min": 0,
+				"max": "1"
+			}
+		],
+		"__pRoyalSuite": [
+			{
+				"dir": "in",
+				"type": "__pbooking",
+				"min": 0,
+				"max": "1"
+			}
+		],
+		"__pStandardRoom": [
+			{
+				"dir": "in",
+				"type": "__pbooking",
+				"min": 0,
+				"max": "1"
+			}
+		],
+		"__pselect": [
+			{
+				"dir": "in",
+				"type": "__pUser",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "__pHotel",
+				"min": 0,
+				"max": "1"
+			}
+		]
+	},
+	"legalConnections": {
+		"__pUser": {
+			"__pHotel": [
+				"__pselect"
+			]
+		},
+		"__pHotel": {
+			"__pRoom": [
+				"__pbooking"
+			],
+			"__pRoyalSuite": [
+				"__pbooking"
+			],
+			"__pStandardRoom": [
+				"__pbooking"
+			]
+		}
+	},
+	"connectorTypes": {
+		"__pbooking": "visual",
+		"__pselect": "visual"
+	},
+	"types2parentTypes": {
+		"__pUser": [],
+		"__pHotel": [],
+		"__pRoom": [],
+		"__pbooking": [],
+		"__pRoyalSuite": [
+			"__pRoom"
+		],
+		"__pStandardRoom": [
+			"__pRoom"
+		],
+		"__pGC_Hotel_Max": [],
+		"__pGC_Hotel_Max_Room": [],
+		"__pselect": [],
+		"__pGC_Unique_UserID": []
+	}
+}
